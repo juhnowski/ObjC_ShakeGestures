@@ -25,5 +25,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+    if(event.subtype == UIEventSubtypeMotionShake){
+        self.Label.text = @"The device was shaken";
+    }
+    
+}
 
 @end
